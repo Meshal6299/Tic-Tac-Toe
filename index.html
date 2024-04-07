@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="game">
+        <h1>Tic-Tac-Toe</h1>
+        <div id="display">
+            <h2 id="player1">Player 1<p id="score1">Score: 0</p></h2>
+            <h2 id="player2">Player 2<p id="score2">Score: 0</p></h2>
+        </div>
+        <table>
+            <tbody>
+                <tr id="1"><td id="r1c1">1</td><td id="r1c2">2</td><td id="r1c3">3</td></tr>
+                <tr id="2"><td id="r2c1">4</td><td id="r2c2">5</td><td id="r2c3">6</td></tr>
+                <tr id="3"><td id="r3c1">7</td><td id="r3c2">8</td><td id="r3c3">9</td></tr>
+            </tbody>
+        </table>
+        <button id="reset" onclick="reset()">Reset Game</button>
+    </div>
 </body>
 </html>
