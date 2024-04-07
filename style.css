@@ -67,3 +67,9 @@ button:active{
 #player2{
     color: red;
 }
+#player1,#player2{
+    font-size: 2.3rem;
+}
+#score1,#score2{
+    font-size: 1.5rem;
+}

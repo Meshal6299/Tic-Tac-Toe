@@ -1,4 +1,4 @@
-let currentPlayer = 1;
+    let currentPlayer = 1;
 
     function reset() {
         const sc1 = document.getElementById("score1");
@@ -9,24 +9,22 @@ let currentPlayer = 1;
 
         const spaces = document.querySelectorAll("td");
         spaces.forEach(space => {space.innerText = "";});
-
-        const currentPlayerDisplay = document.getElementById(`player1}`);
-        const otherPlayerDisplay = document.getElementById(`player2`);
-
-        currentPlayerDisplay.style.textShadow = "none"; // Add text shadow to indicate current player
-        otherPlayerDisplay.style.textShadow = "none"; // Remove text shadow from other player
     }
 
     function changeTurns() {
-        currentPlayer = currentPlayer === 1 ? 2 : 1; // Toggle between players 1 and 2
+        currentPlayer = currentPlayer === 1 ? 2 : 1;
         const currentPlayerDisplay = document.getElementById(`player${currentPlayer}`);
         const otherPlayerDisplay = document.getElementById(`player${currentPlayer === 1 ? 2 : 1}`);
 
-        currentPlayerDisplay.style.textShadow = "0 0 20px black"; // Add text shadow to indicate current player
-        otherPlayerDisplay.style.textShadow = "none"; // Remove text shadow from other player
+        currentPlayerDisplay.style.textDecoration = "underline black";
+        otherPlayerDisplay.style.textDecoration = "none";
     }
 
     document.addEventListener("DOMContentLoaded", function() {
+
+        const currentPlayerDisplay = document.getElementById(`player${currentPlayer}`);
+        currentPlayerDisplay.style.textDecoration = "underline black";
+
         const spaces = document.querySelectorAll("td");
         spaces.forEach(space => {
             space.addEventListener("click", function() {
