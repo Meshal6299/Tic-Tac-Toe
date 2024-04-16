@@ -4,7 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background: #363636;
+    background-image: url('./ttt.jpg');
     display: flex;
     color: black;
     height: 100vh;
@@ -12,54 +12,60 @@ body{
     align-items: center;
 }
 .game{
-    height: 70vh;
-    background-color: antiquewhite;
-    width: 80vw;
+    height: 700px;
+    background-color: rgba(221, 221, 221, 0.925);
+    width: 600px;
     border-radius: 30px;
     padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
     box-shadow: 0 0 10px black;
 }
 table{
-    height: 50%;
-    width: 50%;
+    height: 400px;
+    width: 400px;
     text-align: center;
 }
 td{
-    border: 2px solid black;
-    font-size: 3.5rem;
+    border: 2px solid 5656567a;
+    border-radius: 20px ;
+    font-size: 4.5rem;
     height: 33%;
     width: 33%;
-}
-h1{
-    font-size: 12vw;
-    font-family: 'Courier New', Courier, monospace;
-    font-style: italic;
-    color: #000;
+    background-color: #bbbbbb;
+    box-shadow: 2px 2px 4px black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #display{
     display: flex;
+    justify-content: center;
     gap: 150px;
+}
+h2{
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-shadow: 1px 1px 2px black;
 }
 p{
     text-align: center;
 }
 button{
     border: 2px solid;
-    border-radius: 20px;
+    border-radius: 10px;
     height: 40px;
-    padding: 10px;
-    width: 100;
+    margin: auto;
+    width: 150px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    font-size: 15px;
-    box-shadow: 0 0 4px;
+    font-size: 20px;
+    box-shadow: 2px 2px 4px black;
     cursor: pointer;
-}
-button:active{
-    filter: brightness(70%);
 }
 #player1{
     color: blue;
@@ -68,8 +74,45 @@ button:active{
     color: red;
 }
 #player1,#player2{
-    font-size: 2.3rem;
+    font-size: 3rem;
 }
 #score1,#score2{
     font-size: 1.5rem;
+}
+.changeProfile{
+    width: 360px;
+    height: 200px;
+    position: absolute;
+    top: 35%;
+    background-color: grey;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+.changeProfile input,select{
+    border: 2px solid black;
+    padding: 3px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.changeProfile label{
+    font-weight: 600;
+    font-size: 25px;
+}
+.changeProfile .closeBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    width: 25px;
+    height: 25px;
+    padding: 1px;
+}
+.changeProfile .doneBtn{
+    width: 90px;
 }
