@@ -116,3 +116,15 @@ button{
 .changeProfile .doneBtn{
     width: 90px;
 }
+.announce-winner{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 40%;
+    background: gray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 4px black;
+}

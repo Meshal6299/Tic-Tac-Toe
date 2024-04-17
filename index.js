@@ -47,10 +47,41 @@
             const spaceC = spaces[c].innerText;
 
             if (spaceA !== "" && spaceA === spaceB && spaceA === spaceC) {
-                winner = spaceA = "X" ? 1 : 2;
+                winner = spaceA;
+                announceWinner(winner);
+                reset();
+                break;
             }
         }
+    }
 
+    let isWinner = false;
+
+    function announceWinner(winner) {
+        if (isWinner) {
+            return;
+        }
+        const message = document.createElement("h2");
+        message.innerText = winner === "X" ? document.getElementById("name1").innerText + " won" : document.getElementById("name2").innerText + " won" ;
+        const div = document.createElement("div");
+        div.classList.add("announce-winner");
+        div.appendChild(message);
+        const body = document.querySelector("body");
+        body.appendChild(div);
+
+        const sc1 = document.getElementById("score1");
+        const sc2 = document.getElementById("score2");
+
+        if (winner === "X") {
+            const currentScore1 = parseInt(sc1.innerText.split(":")[1].trim());
+            sc1.innerText = "Score: " + (currentScore1 + 1);
+        } else {
+            const currentScore2 = parseInt(sc2.innerText.split(":")[1].trim());
+            sc2.innerText = "Score: " + (currentScore2 + 1);
+        }
+
+
+        setTimeout(function() {body.removeChild(div);isWinner = false;}, 2000);
     }
 
     let isProfileOpen = false;
